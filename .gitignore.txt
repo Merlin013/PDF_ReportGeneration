@@ -1,0 +1,8 @@
+.idea/
+Consolidated_CPU_PIVot.xlsx
+Performance Detail_AT-ASIA-ProcessorTime_2012R2_files/
+Performance Detail_AT-ASIA-ProcessorTime_2012R2.htm
+Performance Detail_AT-ASIA-ProcessorTime_2012R2.xlsx
+Report.pdf
+Report1.pdf
+SLAreport.xlsx
