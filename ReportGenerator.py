@@ -16,11 +16,22 @@ pdfRead = py.PdfFileReader(pfile)
 num_pages = pdfRead.numPages
 text = ""
 regex = '(SCOM)'
+drive = '(Logical Disk:)'
 
 for i in range(0, num_pages):
     page= pdfRead.getPage(i)
     text += page.extractText()
     text = text.strip()
+try:
+    for line in io.StringIO(text):
+        if re.findall(drive, line):
+            print(line)
+            words1 = line.split()
+            print(words1)
+            drive_name = words1[7]
+            print(drive_name)
+except:
+    pass
 
 for line in io.StringIO(text):
     if re.findall(regex, line):
@@ -28,6 +39,8 @@ for line in io.StringIO(text):
         server = words[2]
         sname = server.split('.')
         print(sname[0])
+
+
 
 # Camelot does not work with this PDF
 # tables = cam.read_pdf(fname)
